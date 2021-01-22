@@ -15,14 +15,25 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
 /**
- * Metric class.
+ * Agent class.
  */
-class Metric extends ReadOnlyResource
+class AgentToken extends AbstractResource
 {
-    protected static $json_name = 'metrics';
+    private $id;
+    private $token;
+    private $label;
+
+    protected static $json_name = false;
     protected static $json_collection_name = 'values';
-    protected static $url_resource = 'metrics';
+    protected static $url_resource = 'agent_tokens';
+
+    protected static $emptyObject = array(
+        'label',
+        'token'
+    );
+
+    protected static $requiredKeys = array();
 }

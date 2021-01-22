@@ -15,8 +15,27 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
-class AgentHostInfo extends AgentHost
+/**
+ * ReadonlyResource class.
+ *
+ * @extends AbstractResource
+ */
+class ReadOnlyResource extends AbstractResource
 {
+    public function create($params = array())
+    {
+        return $this->noCreate();
+    }
+
+    public function update($params = array())
+    {
+        return $this->noUpdate();
+    }
+
+    public function delete($params = array())
+    {
+        return $this->noDelete();
+    }
 }

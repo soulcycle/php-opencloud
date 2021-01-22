@@ -15,39 +15,18 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
 /**
- * View class.
+ * NotificationType class.
  */
-class View extends ReadOnlyResource
+class NotificationType extends ReadOnlyResource
 {
-    private $timestamp;
-    private $entity;
-    private $alarms;
-    private $checks;
-    private $latest_alarm_states;
+    private $id;
+    private $address;
+    private $fields;
 
     protected static $json_name = false;
     protected static $json_collection_name = 'values';
-    protected static $url_resource = 'views/overview';
-
-    protected $associatedResources = array(
-        'entity' => 'Entity'
-    );
-
-    protected $associatedCollections = array(
-        'alarms' => 'Alarm',
-        'checks' => 'Check'
-    );
-
-    public function getAlarm($info = null)
-    {
-        return $this->getService()->resource('Alarm', $info);
-    }
-
-    public function getCheck($info = null)
-    {
-        return $this->getService()->resource('Check', $info);
-    }
+    protected static $url_resource = 'notification_types';
 }

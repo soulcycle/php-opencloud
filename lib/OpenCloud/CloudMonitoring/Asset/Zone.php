@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
 use Guzzle\Http\Exception\ClientErrorResponseException;
 use OpenCloud\CloudMonitoring\Exception;
