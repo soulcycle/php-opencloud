@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
 use OpenCloud\CloudMonitoring\Collection\MonitoringIterator;
 use OpenCloud\CloudMonitoring\Exception;

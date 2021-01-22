@@ -15,25 +15,39 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
 /**
- * Agent class.
+ * View class.
  */
-class AgentToken extends AbstractResource
+class View extends ReadOnlyResource
 {
-    private $id;
-    private $token;
-    private $label;
+    private $timestamp;
+    private $entity;
+    private $alarms;
+    private $checks;
+    private $latest_alarm_states;
 
     protected static $json_name = false;
     protected static $json_collection_name = 'values';
-    protected static $url_resource = 'agent_tokens';
+    protected static $url_resource = 'views/overview';
 
-    protected static $emptyObject = array(
-        'label',
-        'token'
+    protected $associatedResources = array(
+        'entity' => 'Entity'
     );
 
-    protected static $requiredKeys = array();
+    protected $associatedCollections = array(
+        'alarms' => 'Alarm',
+        'checks' => 'Check'
+    );
+
+    public function getAlarm($info = null)
+    {
+        return $this->getService()->resource('Alarm', $info);
+    }
+
+    public function getCheck($info = null)
+    {
+        return $this->getService()->resource('Check', $info);
+    }
 }

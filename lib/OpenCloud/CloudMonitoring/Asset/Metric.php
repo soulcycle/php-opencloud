@@ -15,22 +15,14 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
 /**
- * AgentConnection class.
+ * Metric class.
  */
-class AgentConnection extends ReadOnlyResource
+class Metric extends ReadOnlyResource
 {
-    private $id;
-    private $guid;
-    private $agent_id;
-    private $endpoint;
-    private $process_version;
-    private $bundle_version;
-    private $agent_ip;
-
-    protected static $json_name = false;
+    protected static $json_name = 'metrics';
     protected static $json_collection_name = 'values';
-    protected static $url_resource = 'agents';
+    protected static $url_resource = 'metrics';
 }

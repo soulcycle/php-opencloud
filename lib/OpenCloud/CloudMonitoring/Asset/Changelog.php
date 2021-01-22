@@ -15,27 +15,22 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
 /**
- * ReadonlyResource class.
- *
- * @extends AbstractResource
+ * Changelog class.
  */
-class ReadOnlyResource extends AbstractResource
+class Changelog extends ReadOnlyResource
 {
-    public function create($params = array())
-    {
-        return $this->noCreate();
-    }
+    private $id;
+    private $timestamp;
+    private $entity_id;
+    private $alarm_id;
+    private $check_id;
+    private $state;
+    private $analyzed_by_monitoring_zone_id;
 
-    public function update($params = array())
-    {
-        return $this->noUpdate();
-    }
-
-    public function delete($params = array())
-    {
-        return $this->noDelete();
-    }
+    protected static $json_name = 'changelogs/alarms';
+    protected static $json_collection_name = 'values';
+    protected static $url_resource = 'changelogs/alarms';
 }

@@ -60,7 +60,7 @@ class Service extends CatalogService
      * Get an agent.
      *
      * @param string|null $id
-     * @return \OpenCloud\CloudMonitoring\Resource\Agent
+     * @return \OpenCloud\CloudMonitoring\Asset\Agent
      */
     public function getAgent($id = null)
     {
@@ -111,7 +111,7 @@ class Service extends CatalogService
      * Get either an empty object, or a populated one that exists on the API.
      *
      * @param null $id
-     * @return \OpenCloud\CloudMonitoring\Resource\Entity
+     * @return \OpenCloud\CloudMonitoring\Asset\Entity
      */
     public function getEntity($id = null)
     {
@@ -132,7 +132,7 @@ class Service extends CatalogService
      * Get a particular check type.
      *
      * @param null $id
-     * @return \OpenCloud\CloudMonitoring\Resource\CheckType
+     * @return \OpenCloud\CloudMonitoring\Asset\CheckType
      */
     public function getCheckType($id = null)
     {
@@ -165,7 +165,7 @@ class Service extends CatalogService
      * Get a particular notification.
      *
      * @param null $id
-     * @return \OpenCloud\CloudMonitoring\Resource\Notification
+     * @return \OpenCloud\CloudMonitoring\Asset\Notification
      */
     public function getNotification($id = null)
     {
@@ -197,7 +197,7 @@ class Service extends CatalogService
      * Get a particular notification plan.
      *
      * @param null $id
-     * @return \OpenCloud\CloudMonitoring\Resource\NotificationPlan
+     * @return \OpenCloud\CloudMonitoring\Asset\NotificationPlan
      */
     public function getNotificationPlan($id = null)
     {
@@ -218,7 +218,7 @@ class Service extends CatalogService
      * Get a particular notification type.
      *
      * @param null $id
-     * @return \OpenCloud\CloudMonitoring\Resource\NotificationType
+     * @return \OpenCloud\CloudMonitoring\Asset\NotificationType
      */
     public function getNotificationType($id = null)
     {
@@ -249,7 +249,7 @@ class Service extends CatalogService
      * Get a particular monitoring zone.
      *
      * @param null $id
-     * @return \OpenCloud\CloudMonitoring\Resource\Zone
+     * @return \OpenCloud\CloudMonitoring\Asset\Zone
      */
     public function getMonitoringZone($id = null)
     {

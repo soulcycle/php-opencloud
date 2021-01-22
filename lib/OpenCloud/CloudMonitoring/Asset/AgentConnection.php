@@ -15,18 +15,22 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
 /**
- * NotificationType class.
+ * AgentConnection class.
  */
-class NotificationType extends ReadOnlyResource
+class AgentConnection extends ReadOnlyResource
 {
     private $id;
-    private $address;
-    private $fields;
+    private $guid;
+    private $agent_id;
+    private $endpoint;
+    private $process_version;
+    private $bundle_version;
+    private $agent_ip;
 
     protected static $json_name = false;
     protected static $json_collection_name = 'values';
-    protected static $url_resource = 'notification_types';
+    protected static $url_resource = 'agents';
 }

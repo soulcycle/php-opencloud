@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
-class MetricDataPoint extends Metric
+class AgentHostInfo extends AgentHost
 {
 }

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace OpenCloud\CloudMonitoring\Resource;
+namespace OpenCloud\CloudMonitoring\Asset;
 
 use OpenCloud\CloudMonitoring\Exception;
 use OpenCloud\Common\Http\Message\Formatter;
